@@ -132,7 +132,15 @@ class exports.Parser extends events.EventEmitter
 
       s = stack[stack.length - 1]
       # remove the '#' key altogether if it's blank
-      if obj[charkey].match(/^\s*$/) and not cdata
+      # if obj[charkey].match(/^\s*$/) and not cdata
+
+      # CHANGE for previus line
+      # we don't want to lose the empty spaces in values therefore we remove _ only when
+      # there IS NO $ or there IS NO other key, because in this cases we would later lose the value
+      # however we remove _ in case we are anyway trimming
+      hasNonSystemKey = if obj.hasOwnProperty('$') then Object.keys(obj).length > 2 else Object.keys(obj).length > 1                
+
+      if obj[charkey] == '' or (obj[charkey].match(/^\s*$/) and (hasNonSystemKey or _this.options.trim)) and not cdata        
         emptyStr = obj[charkey]
         delete obj[charkey]
       else

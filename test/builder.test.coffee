@@ -139,6 +139,7 @@ module.exports =
       xmlExpected = xmlData.toString()
       xml2js.parseString xmlData, {'trim': true}, (err, obj) ->
         equ err, null
+        console.log(JSON.stringify(obj))
         builder = new xml2js.Builder({})
         xmlActual = builder.buildObject obj
         diffeq xmlExpected, xmlActual

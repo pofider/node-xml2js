@@ -68,7 +68,9 @@ module.exports =
     equ r.sample.listtest[0].item[0].subitem[2], 'Foo(3)'
     equ r.sample.listtest[0].item[0].subitem[3], 'Foo(4)'
     equ r.sample.listtest[0].item[1], 'Qux.'
-    equ r.sample.listtest[0].item[2], 'Quux.'
+    equ r.sample.listtest[0].item[2], 'Quux.'    
+    equ r.sample.spaceAttribute[0]._, ' '
+    equ r.sample.space[0], ' '
     # determine number of items in object
     equ Object.keys(r.sample.tagcasetest[0]).length, 3)
 
