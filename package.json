@@ -1,11 +1,11 @@
 {
-  "name": "xml2js",
+  "name": "xml2js-preserve-spaces",
   "description": "Simple XML to JavaScript object converter.",
   "keywords": [
     "xml",
     "json"
   ],
-  "homepage": "https://github.com/Leonidas-from-XIV/node-xml2js",
+  "homepage": "https://github.com/pofider/node-xml2js",
   "version": "0.4.19",
   "author": "Marek Kubica <marek@xivilization.net> (https://xivilization.net)",
   "contributors": [
